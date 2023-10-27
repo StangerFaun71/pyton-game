@@ -48,16 +48,34 @@ def game_over():
     game_over_text = font.render("Game Over", True, red)
     screen.blit(game_over_text, (150, 250))
     pygame.display.update()
+
+    # Eredmény elmentése egy szövegfájlba ("scores.txt")
+    with open("scores.txt", "a") as f:
+        f.write("Score: " + str(score) + "\n")
+
     pygame.time.delay(1000)
     main()
 
+def get_high_score():
+    try:
+        with open("scores.txt", "r") as f:
+            scores = f.readlines()
+        if scores:
+            scores = [int(score.strip().split(": ")[1]) for score in scores if score.startswith("Score: ")]
+            return max(scores)
+    except FileNotFoundError:
+        pass
+    return 0
+
 def main():
     global is_between_pipes  # Deklaráljuk a változót globálisnak
+    global score  # Deklaráljuk a pontszámot globálisnak
     bird_y = screen_height // 2
     bird_speed = 0
     pipes.clear()
-    score = 0
     is_between_pipes = False
+
+    high_score = get_high_score()
 
     while True:
         for event in pygame.event.get():
@@ -88,6 +106,7 @@ def main():
                 pipes.remove(pipe)
                 score += 1
 
+
             if is_between_pipes:
                 continue
 
@@ -105,11 +124,15 @@ def main():
             gap_height = random.randint(100, 400)
             pipes.append([screen_width, gap_height])
 
+        if score > high_score:
+            high_score = score
+
         score_text = font.render("Score: " + str(score), True, red)
         screen.blit(score_text, (10, 10))
+        high_score_text = font.render("High Score: " + str(high_score), True, red)
+        screen.blit(high_score_text, (10, 50))
         pygame.display.update()
 
         pygame.time.delay(30)
 
 main()
-
