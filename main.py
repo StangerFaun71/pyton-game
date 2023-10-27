@@ -15,6 +15,8 @@ white = (255, 255, 255)
 blue = (0, 0, 255)
 red = (255, 0, 0)
 bird_color = (255, 255, 0)
+back = (137, 207, 240)
+green = (54, 110, 34)
 
 # Madár jellemzői
 bird_x = 100
@@ -39,8 +41,8 @@ def draw_bird(x, y):
     pygame.draw.rect(screen, bird_color, (x, y, 40, 40))
 
 def draw_pipe(x, gap_height):
-    pygame.draw.rect(screen, blue, (x, 0, pipe_width, gap_height))
-    pygame.draw.rect(screen, blue, (x, gap_height + pipe_gap, pipe_width, screen_height - gap_height - pipe_gap))
+    pygame.draw.rect(screen, green, (x, 0, pipe_width, gap_height))
+    pygame.draw.rect(screen, green, (x, gap_height + pipe_gap, pipe_width, screen_height - gap_height - pipe_gap))
 
 def game_over():
     game_over_text = font.render("Game Over", True, red)
@@ -75,7 +77,7 @@ def main():
         if bird_y >= screen_height - 40:
             bird_y = screen_height - 40
 
-        screen.fill(white)
+        screen.fill(back)
         draw_bird(bird_x, bird_y)
 
         for pipe in pipes:
