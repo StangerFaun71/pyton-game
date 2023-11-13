@@ -14,6 +14,28 @@ namespace games
             Random rnd = new Random();
             do
             {
+                int szam = rnd.Next(0, 100);
+                    int találat = 0;
+                    int darab = 0;
+                    Console.WriteLine("Találd ki a számot");
+                    találat = int.Parse(Console.ReadLine());
+                    do
+                    {
+                        if (szam > találat)
+                        {
+                            Console.WriteLine("A szám nagyobb mint a tipped");
+                            találat = int.Parse(Console.ReadLine());
+                            darab++;
+                        }
+                        else if (szam < találat)
+                        {
+                            Console.WriteLine("A szám kissebb mint a tipped");
+                            találat = int.Parse(Console.ReadLine());
+                            darab++;
+                        }
+                    } while (szam != találat);
+                    Console.WriteLine($"Gratulálok eltaláltad!A szám: {szam} ");
+                    Console.WriteLine($"Ennyi találatból találtad el : {darab}");
                 Console.Write("Akarsz járszani még egyet ? y/n");
                 userInput = Console.ReadKey().KeyChar;
                 Console.WriteLine(); 
@@ -27,9 +49,6 @@ namespace games
                 }
                 else if (userInput == 'y')
                 {
-                    int szam = rnd.Next(0, 100);
-                    int találat = 0;
-                    int darab = 0;
                     Console.WriteLine("Találd ki a számot");
                     találat = int.Parse(Console.ReadLine());
                     do

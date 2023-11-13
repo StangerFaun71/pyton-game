@@ -5,3 +5,10 @@ C:\Users\T1\Documents\Visual Studio 2019\Projects\ciklusok gyakorlás\harmadik\o
 C:\Users\T1\Documents\Visual Studio 2019\Projects\ciklusok gyakorlás\harmadik\obj\Debug\harmadik.csproj.CoreCompileInputs.cache
 C:\Users\T1\Documents\Visual Studio 2019\Projects\ciklusok gyakorlás\harmadik\obj\Debug\harmadik.exe
 C:\Users\T1\Documents\Visual Studio 2019\Projects\ciklusok gyakorlás\harmadik\obj\Debug\harmadik.pdb
+C:\Users\Bazsi\Desktop\c#\találgatós\obj\Debug\harmadik.csprojAssemblyReference.cache
+C:\Users\Bazsi\Desktop\c#\találgatós\obj\Debug\harmadik.csproj.CoreCompileInputs.cache
+C:\Users\Bazsi\Desktop\c#\találgatós\obj\Debug\harmadik.exe
+C:\Users\Bazsi\Desktop\c#\találgatós\obj\Debug\harmadik.pdb
+C:\Users\Bazsi\Desktop\c#\találgatós\bin\Debug\harmadik.exe.config
+C:\Users\Bazsi\Desktop\c#\találgatós\bin\Debug\harmadik.exe
+C:\Users\Bazsi\Desktop\c#\találgatós\bin\Debug\harmadik.pdb
